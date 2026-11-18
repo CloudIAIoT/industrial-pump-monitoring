@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "industrial-pump-monitoring"
+version = "0.1.0"
+description = "Industrial pump monitoring simulator and cloud monitoring project"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8,<10"
+]
+
+[tool.setuptools.packages.find]
+include = ["industrial_pump_monitoring*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
