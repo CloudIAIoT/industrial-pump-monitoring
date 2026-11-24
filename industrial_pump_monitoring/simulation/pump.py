@@ -1,6 +1,5 @@
 from industrial_pump_monitoring.simulation.calculations import calculate_next_value
 import random
-import time
 
 VALID_STATUSES = {"NORMAL", "OFF", "ABNORMAL"}
 
@@ -83,8 +82,3 @@ class IndustrialPump:
             "vibration": self.vibration,
             "pressure": self.pressure
         }
-
-pump_01 = IndustrialPump("PUMP-01", "NORMAL", 55.5, 1.4, 3.8)
-print(pump_01.read_measurements())
-    
-
